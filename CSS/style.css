@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One|Stint+Ultra+Expanded");
+/* Coolors Exported Palette - coolors.co/310047-9d4d3c-adbfcb-982720-500159 */
+/* HSL */
+/* RGB */
+/* Enkel CSS-reset */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+}
+
+body .container header h1 {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
