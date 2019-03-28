@@ -13,13 +13,16 @@
         <header>
         <h1>ElevRate</h1>
             <nav>
-                <a href="#" class="active">HOME</a><a href="reviews.php">REVIEWS</a><a href="signup.php">SIGNUP</a><a href="login.php">LOGIN</a>
+                <a href="index.php">HOME</a><a href="reviews.php">REVIEWS</a><a href="signup.php">SIGNUP</a><a href="#" class="active">LOGIN</a>
             </nav>
         </header>
         <main>
             <section>
-                <input name="search" type="text"><button>Search</button><br>
-                <img src="Images/map.png" alt="">
+                <label for="email">E-Mail:</label><br>
+                <input name="email" type="text" class="form"><br>
+                <label for="losenord">Lösenord:</label><br>
+                <input name="losenord" type="text" class="form"><br>
+                <button>Logga In</button>
             </section>
         </main>
     </div>

@@ -19,10 +19,99 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 body {
-  background: #000;
+  background: #adbfcb;
+}
+
+body .container {
+  text-align: center;
+  margin: auto;
 }
 
 body .container header h1 {
+  text-align: center;
+  color: Black;
+  font-size: 40px;
+  font-family: 'stint ultra expanded';
+}
+
+body .container header nav {
+  margin: auto;
+  width: auto;
+  padding: 30px;
+}
+
+body .container header nav a {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin: 0px;
+  color: black;
+  padding: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: white;
+}
+
+body .container header nav a.active {
+  background-color: darkgray;
   color: white;
+}
+
+body .container header nav a:hover {
+  background-color: lightgray;
+}
+
+body .container main section {
+  margin: auto;
+  background-color: white;
+  width: 1000px;
+  -webkit-box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.75);
+}
+
+body .container main section input {
+  margin: 25px auto 25px auto;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+}
+
+body .container main section input.form {
+  width: 400px;
+  margin: auto auto 25px auto;
+  font-size: 30px;
+}
+
+body .container main section button {
+  margin: auto;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+}
+
+body .container main section img {
+  margin: auto;
+}
+
+body .container main section div.reviews {
+  height: 250px;
+  margin: auto 25px 25px 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+body .container main section div.reviews h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'passion one';
+}
+
+body .container main section div.reviews img {
+  width: 300px;
+  float: left;
+  margin: 15px;
 }
 /*# sourceMappingURL=style.css.map */
