@@ -13,6 +13,9 @@ ini_set("display_errors", 1); */
 include_once "{$_SERVER["DOCUMENT_ROOT"]}/../config/config-db.inc.php";
 
 session_start();
+if (!isset($_SESSION['loggedin'])){
+    $_SESSION['loggedin'] = false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -29,8 +32,14 @@ session_start();
         <header>
             <h1>ElevRate</h1>
             <nav>
-                <a href="index.php">HOME</a><a href="reviews.php">REVIEWS</a><a href="signup.php">SIGNUP</a><a href="#"
-                    class="active">LOGIN</a>
+                <a href="index.php">HOME</a><a href="reviews.php">REVIEWS</a><a href="signup.php">SIGNUP</a><?php
+                if ($_SESSION['loggedin']) {
+                    echo "<a href='restaurang.php'>RESTAURANG</a>";
+                    echo "<a href='logout.php' class='active'>LOGOUT</a>";
+                }else {
+                    echo "<a href='#' class='active'>LOGIN</a>";
+                }
+                ?>
             </nav>
         </header>
         <main>
@@ -66,10 +75,13 @@ if (isset($_POST["email"]) && isset($_POST["losenord"])){
 
         /* nu ska vi jämföra lösenordet med hashen */
         if (password_verify($losen, $user['losen'])) {
+            echo "<script>alert('Du är inloggad!');</script>";
             $_SESSION['loggedin'] = true;
             $_SESSION['anamn'] = $user['fornamn'];
+            header("Location: index.php");
         } else {
             echo "<script>alert('Lösen ordet är fel, var god och försök igen!');</script>";
+            $_SESSION['loggedin'] = false;
         }
         
     }

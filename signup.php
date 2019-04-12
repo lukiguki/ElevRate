@@ -11,6 +11,11 @@
 ini_set("display_errors", 1); */
 
 include_once "{$_SERVER["DOCUMENT_ROOT"]}/../config/config-db.inc.php";
+
+session_start();
+if (!isset($_SESSION['loggedin'])){
+    $_SESSION['loggedin'] = false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -27,8 +32,13 @@ include_once "{$_SERVER["DOCUMENT_ROOT"]}/../config/config-db.inc.php";
         <header>
             <h1>ElevRate</h1>
             <nav>
-                <a href="index.php">HOME</a><a href="reviews.php">REVIEWS</a><a href="#" class="active">SIGNUP</a><a
-                    href="login.php">LOGIN</a>
+                <a href="index.php">HOME</a><a href="reviews.php">REVIEWS</a><a href="#" class="active">SIGNUP</a><?php
+                if ($_SESSION['loggedin']) {
+                    echo "<a href='restaurang.php'>RESTAURANG</a>";
+                }else {
+                    echo "<a href='login.php'>LOGIN</a>";
+                }
+                ?>
             </nav>
         </header>
         <main>
